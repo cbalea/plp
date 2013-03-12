@@ -7,10 +7,10 @@ baza = int(raw_input('Intoru valoarea de baza a masinii: '))
 
 tva = baza*24/100
 asigurare = 500
-taxa_mediu = 1500
+taxaMediu = 1500
 
 print "\nTAXE:"
 print "TVA: %.2f" %tva
 print "asigurare: %d" %asigurare
-print "taxa mediu: %d" %taxa_mediu
-print "\n\nPRET FINAL (cu taxe incluse): %.2f" %(baza + tva + asigurare + taxa_mediu)
+print "taxa mediu: %d" %taxaMediu
+print "\n\nPRET FINAL (cu taxe incluse): %.2f" %(baza + tva + asigurare + taxaMediu)
