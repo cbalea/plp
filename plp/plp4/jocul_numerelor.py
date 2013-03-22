@@ -4,18 +4,20 @@ Jucatorul isi alege un numar aleator intre 1 si 100 iar calculatorul incearca sa
 Dupa fiecare incercare jucatorul trebuie sa comunice programului daca incercarea a fost corecta, 
 mai mica sau mai mare decat numarul ales.
 '''
-import random
 
-mesaj = None
+start=1
+end=100
+gasit = False
 
-while mesaj != 0:
-    incercare = random.randint(1, 100)
+while not gasit:
+    incercare = (start + end)/2
     print "Incerc cu %d" %incercare
     mesaj = int(raw_input("Daca numarul incercat este \n'mai mic' apasa -1 \n'mai mare' apasa 1 \n'ghicit' apasa 0 \n"))
     if mesaj == -1:
-        incercare = random.randint(incercare, 100)
+        start = incercare - 1
     elif mesaj ==1:
-        incercare = random.randint(1, incercare)
+        end = incercare + 1
     else:
-        print "Am ghicit!"
+        print "Ai ghicit!"
+        gasit = True
     
